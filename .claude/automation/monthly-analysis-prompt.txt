@@ -1,0 +1,12 @@
+Run this brand's monthly data analysis. You are in the brand workspace — read CLAUDE.md first and respect all its rules.
+
+Follow .claude/skills/data-analyzer/SKILL.md, which executes sop/SOP_Data_Analysis.md (the canonical process). The analysis period is the month that just ended.
+
+Data acquisition, in order of preference:
+1. Unprocessed analytics exports in data/analysis/ — parse via the excel MCP if available in your session, else the Node xlsx fallback in the scratchpad.
+2. A platform-analytics MCP if one is connected — pull the period's account and media insights.
+3. If NEITHER exists (folder empty, no analytics MCP): do not fabricate anything. Write a short skip note to presentations/data-analysis/<YYYY-MM>/SKIPPED.md stating what was missing and what the user should export, then stop.
+
+You are running headless — no user interaction is possible. Where the skill defines user gates, convert them to written output instead: strategy-changing recommendations (rotation weights, format ratios, audience rebalances) are NEVER applied to the living docs — write them into the insights.md under a "Proposed strategy changes — awaiting user decision" section. Routine outputs (dashboard.html, insights.md, moving processed exports out of the intake folder, source logging) proceed per SOP Step 7.
+
+Work autonomously and leave the deliverables in presentations/data-analysis/<YYYY-MM>/.

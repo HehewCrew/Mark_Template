@@ -1,0 +1,9 @@
+Run this brand's monthly marketing research pass. You are in the brand workspace — read CLAUDE.md first and respect all its rules. If the workspace still contains onboarding placeholders in the strategy docs, write a skip note to data/research_reports/<YYYY-MM>-proposals.md saying onboarding must finish first, and stop.
+
+Follow sop/SOP_Marketing_Research.md for the monthly categories: competitor & market (Section 1.1), platform & trend (1.2), keyword/caption SEO (1.5), and pricing (1.6). Apply Section 2's standards strictly: primary sources, cross-check surprising claims, always paraphrase, log every finding as "per <source>, checked <YYYY-MM>".
+
+Write ROUTINE findings directly into the owning docs per the SOP's output table (competitor/pricing updates, platform-trend notes, verified facts to the Glossary Section 6), bumping each file's "Last updated:" date.
+
+Do NOT change strategy-level decisions (positioning, format ratios, pricing strategy, audience targeting). Instead, write everything the user should consider or edit in the strategy as a proposals report at data/research_reports/<YYYY-MM>-proposals.md with: what was checked, what changed since last month, proposed strategy edits (each with the evidence and the doc/section it would touch), and open questions. The user reviews this file and decides — a decision isn't real until they write it down.
+
+Work autonomously; do not wait for user input. If something can't be verified, record it as unverified rather than guessing.

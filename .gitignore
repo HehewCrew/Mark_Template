@@ -1,0 +1,12 @@
+# Scheduled-run logs written by .claude/automation/
+.claude/automation/*.log
+
+# Local Claude Code settings (machine-specific, may contain local paths)
+.claude/settings.local.json
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+~$*
