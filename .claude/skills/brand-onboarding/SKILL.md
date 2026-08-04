@@ -70,7 +70,11 @@ Ask whether the niche has technical vocabulary worth standardizing. If yes: defi
 1. Fill `sop/SOP.md`'s tool/format slots and team-size assumption from Phase 3 answers.
 2. Set the week anchor and plan Cycle 1 in `data/content_planner.md` (episodes grounded in the Phase 1 reference sources — build the Appendix source→series map if material exists in `data/references/`). **Existing brand:** the anchor is when this *workspace's* rotation starts, not a launch date — and seed the planner's episode log with recent already-published topics (from the owner or the account itself) so the redundancy guard knows what's been done.
 3. Ask about automation appetite: if wanted, configure `.claude/automation/` per its README (scheduled research/analysis runs) — otherwise leave documented but disarmed.
-4. Confirm `.mcp.json` (an Excel MCP is pre-registered for analytics parsing; add others as needed).
+4. **Ask whether they want the Telegram bot** (`bot/`, optional — the workspace is fully functional without it). Explain what it is in a sentence before asking: a phone-side reporter over the repo's own files that shows what's scheduled, delivers finished packages to your phone, and archives a package once you confirm it went live. It has no model in it — it only executes what you tapped.
+   - **Yes** → walk them through `bot/README.md`: create the bot with @BotFather, copy `.env.example` to `.env` with the token, install the requirements, run it, then `/id` → allowlist → restart. Then set `PILLAR_SLUGS` in `bot/pillars.py` to the pillars locked in Phase 3, and add the Phase 3 series names to `_SERIES_BY_PILLAR` so `/posted` can pre-select a pillar.
+   - **No / not yet** → leave `bot/` as it is and say it can be set up any time; nothing else in the workspace depends on it. Do not delete the folder.
+   - Either way, never write a real token into any tracked file — it belongs only in `bot/.env`, which is gitignored.
+5. Confirm `.mcp.json` (an Excel MCP is pre-registered for analytics parsing; add others as needed).
 
 ## Phase 7 — Close-out
 

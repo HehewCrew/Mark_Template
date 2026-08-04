@@ -21,6 +21,8 @@ This workspace started from a generic brand template. **Any `{{...}}` placeholde
 
 **Agent team:** `.claude/agents/` defines six specialists wrapping the project skills — content-writer, template-maker, researcher, visual-designer, analyst, presenter — orchestrated by the `/day-planner` skill (derive Day X task list → user approval → dispatch → main-thread user gates → sync). Subagents never talk to the user; all approvals/reviews/taste decisions happen in the main thread. **The repo files are the team's sync medium**: `data/content_planner.md` (schedule + done-log), `social/queue/` (content output), the `context/`+`sop/` docs (decisions), and the designer skill's learned-decisions log (preferences).
 
+**Optional Telegram bot:** `bot/` is an opt-in phone-side interface — a reporter over this repo's own files (planner, queue, analytics output) with two write paths, `/posted` (archive a published package, update the planner, commit) and `/fix` (log a correction for a later session to apply). **It has no model in it**: it executes only what the owner tapped, and refuses rather than guesses when inputs don't line up. The workspace is fully functional without it; `/brand-onboarding` Phase 6 asks whether the owner wants it. Its token lives in `bot/.env`, which is gitignored — never write a real token into a tracked file.
+
 ## Document map — read this first
 
 There is no single source of truth file; instead, the interlinked docs each own one concern. Before editing anything, know which file governs the question at hand:

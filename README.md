@@ -23,6 +23,7 @@ A generic, reusable Claude Code workspace for running a brand's content & market
 | `.claude/skills/` | brand-onboarding, content-creator, template-generator, marketing-research-agent, data-analyzer, designer, presentator, day-planner |
 | `.claude/agents/` | Six specialist subagents orchestrated by /day-planner |
 | `.claude/automation/` | Optional scheduled monthly research/analysis runs (disarmed until you register the tasks — see its README) |
+| `bot/` | **Optional** Telegram assistant — the workflow on your phone. No model in it: it reports over the repo's files and only executes what you tapped. Set up during onboarding or any time later; nothing depends on it (see `bot/README.md`) |
 
 ## Operating principles (baked into every skill)
 
